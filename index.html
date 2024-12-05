@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Teori</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;                              //Tyesha Bella Marrisa Simamora
+            padding: 0;                             //202331124
+        }
+        .sidebar {
+            height: 100vh;
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+        .content {
+            padding: 20px;
+        }
+        <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(120deg, #ffe4e1, #f7d6e0);
+        color: #333;
+        position: relative;
+        overflow-x: hidden;
+    }
+                                             //Tyesha Bella Marrisa Simamora
+    .sidebar {                              //202331124
+        height: 100vh;
+        background: #fdfd96; /* Warna pastel kuning muda */
+        padding-top: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 0 15px 15px 0;
+    }
+
+    .sidebar h5 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ff6f91; /* Warna merah muda pastel */
+    }
+
+    .nav-link {
+        color: #333;
+        transition: all 0.3s ease;
+        font-weight: bold;
+    }
+
+    .nav-link:hover {
+        background-color: #ff6f91;
+        color: white;
+        border-radius: 5px;
+        padding-left: 10px;
+    }
+
+    .content {
+        padding: 20px;
+        background: white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+    }
+
+    footer {
+        background: #ff6f91;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    footer h5 {                         //Tyesha Bella Marrisa Simamora
+        font-size: 1.2rem;              //202331124
+    }
+
+    footer ul {
+        list-style-type: square;
+    }
+
+    /* Tambahan Background Lucu */
+    .background-decorations {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .background-decorations .circle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.5;
+    }
+
+    .circle1 {
+        background: #ff6f91;
+        width: 200px;
+        height: 200px;
+        top: 20%;
+        left: 10%;
+    }
+
+    .circle2 {
+        background: #fdfd96;
+        width: 300px;
+        height: 300px;
+        top: 50%;
+        right: 5%;
+    }
+
+    .circle3 {
+        background: #77dd77;
+        width: 150px;
+        height: 150px;
+        bottom: 10%;
+        left: 30%;
+    }
+</style>
+
+</head>
+<div class="background-decorations">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+</div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 sidebar border-end">
+                <h5 class="text-center">Daftar Soal</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="loadContent('php_intro')">Konsep Dasar PHP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="loadContent('get_vs_post')">Perbandingan GET vs POST</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="loadContent('include_require')">Include dan Require</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Main Content -->
+            <main class="col-md-9 col-lg-10 content">
+                <div class="text-center">
+                    <h1>LAPORAN TEORI</h1>
+                    <h2>Tyesha Bella Marrisa Simamora | 202331124</h2>
+                </div>
+                <div id="question-content" class="mt-4">
+                    <p>Silakan pilih soal dari sidebar untuk melihat jawabannya.</p>
+                </div>
+                <footer class="mt-5">
+                    <h5>Daftar Pustaka:</h5>
+                    <ul>
+                        <li>Agus Suratna. (2020). Include dan Require Pada PHP. Media Pembelajaran.</li>
+                        <li>Baba Studio. (2019). Mengenal Include dan Require pada PHP. Babastudio.com.</li>
+                        <li>Fajar Nugroho. (2023). Contoh Metode GET dan POST di PHP.</li>
+                        <li>Pilar Solusi Indonesia. (2023). Perbedaan Metode GET dan POST dalam PHP.</li>
+                        <li> Rizky Kurniawan. (2021). CRUD Sederhana Menggunakan PHP dan MySQL.</li>
+                        <li> Solichin, A. (2005). pemograman web dengan php dan mysql. Jakarta: Universitas Budi Luhur.</li>
+                        <li> Wibowo, K. (2015). ANALISA KONSEP OBJECT ORIENTED PROGRAMMING PADA BAHASA PEMROGRAMAN PHP. AMIK Bina Sarana Informatika. </li>
+                    </ul>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        function loadContent(section) {
+            const content = {
+                php_intro: `
+                    <h3>Konsep Dasar PHP</h3>
+                    <h4>a. Apa itu PHP?</h4>
+                    <p>PHP adalah bahasa pemrograman server-side yang dirancang untuk membuat aplikasi web dinamis. PHP memungkinkan pengembang untuk berinteraksi dengan database, file, dan folder.</p>
+                    <h4>b. Keunggulan PHP:</h4>
+                    <ul>
+                        <li>Kemudahan Belajar</li>
+                        <li>Open Source dan Gratis</li>
+                        <li>Kompatibilitas Lintas Platform</li>
+                        <li>Kinerja Tinggi</li>
+                        <li>Integrasi Mudah dengan Basis Data</li>
+                        <li>Dukungan Komunitas yang Kuat</li>
+                    </ul>
+                `,
+                get_vs_post: `
+                    <h3>Perbandingan GET dan POST</h3>
+                    <h4>a. Perbedaan:</h4>
+                    <ul>
+                        <li><strong>GET:</strong> Data dikirim melalui URL, kurang aman, cocok untuk pencarian.</li>
+                        <li><strong>POST:</strong> Data dikirim melalui body, lebih aman, cocok untuk data sensitif.</li>
+                    </ul>
+                    <h4>b. Contoh Kasus:</h4>
+                    <p><strong>GET:</strong> Digunakan untuk pencarian di Google.<br>
+                       <strong>POST:</strong> Digunakan untuk registrasi akun.</p>
+                `,
+                include_require: `
+                    <h3>Include dan Require</h3>
+                    <h4>a. Penjelasan :</h4>
+                    <p><strong>Include:</strong> Menyisipkan file, tetap berjalan meski terjadi error.<br>
+                       <strong>Require:</strong> Menyisipkan file, berhenti jika terjadi error.</p>
+                    <h4>b. Contoh Koneksi PHP dengan MySQL:</h4>
+            <p>Menyiapkan Database MySQL
+
+    Buat database baru, misalnya test_db.
+    Di dalam database tersebut, buat tabel dengan kolom yang relevan, misalnya users dengan kolom id, name, dan email.
+
+Konsep Koneksi PHP ke MySQL
+
+    PHP menggunakan ekstensi seperti mysqli atau PDO untuk berinteraksi dengan database.
+    Konfigurasi koneksi melibatkan host database, nama pengguna, kata sandi, dan nama database.
+
+Langkah Implementasi:
+
+    Koneksi ke Database: PHP membuat koneksi menggunakan fungsi atau kelas yang disediakan oleh mysqli atau PDO.
+    Menjalankan Query: Query SQL seperti SELECT, INSERT, UPDATE, atau DELETE dieksekusi untuk memanipulasi atau membaca data.
+    Mengelola Hasil Query: Data hasil query dapat diolah, seperti ditampilkan di halaman web.
+    Menutup Koneksi: Setelah selesai, koneksi ke database harus ditutup untuk menghemat sumber daya.
+
+Proses Utama:
+
+    Menyimpan Data: Menggunakan query INSERT untuk menambahkan data ke tabel.
+    Membaca Data: Menggunakan query SELECT untuk mengambil dan menampilkan data dari tabel.
+    Memperbarui Data: Menggunakan query UPDATE untuk mengubah data yang ada.
+    Menghapus Data: Menggunakan query DELETE untuk menghapus data.
+
+Keamanan dan Praktik Terbaik:
+
+    Gunakan prepared statements untuk mencegah SQL Injection.
+    Validasi input pengguna sebelum digunakan dalam query.
+    Pastikan koneksi ke database aman dengan menggunakan protokol terenkripsi jika memungkinkan.
+
+Hasil Akhir:
+
+    Aplikasi sederhana dengan fitur CRUD (Create, Read, Update, Delete) dapat dibuat untuk mengelola data di database MySQL.
+    Hasil query dapat ditampilkan dalam antarmuka pengguna berbasis web.</p>
+            <h4>C. Mengapa penggunaan include dan require penting dalam pengelolaan kode program yang besar dan kompleks?</h4>
+            <p>Mengurangi Duplikasi Kode
+Dengan menggunakan include dan require, pengembang dapat menulis kode yang sama hanya sekali dalam satu file dan menyertakannya di berbagai tempat lainnya. Ini tidak hanya menghemat waktu tetapi juga memudahkan pemeliharaan kode, karena jika ada perubahan yang perlu dilakukan, pengembang hanya perlu memperbarui satu file. 
+2. Modularitas Kode
+Fungsi-fungsi ini memungkinkan pengembang untuk membagi kode menjadi modul-modul yang lebih kecil dan terpisah. Misalnya, bagian-bagian seperti header, footer, dan koneksi database dapat disimpan dalam file terpisah. Ini menciptakan struktur yang lebih terorganisir dan memudahkan kolaborasi dalam tim pengembangan. 
+3. Penanganan Kesalahan yang Berbeda
+Perbedaan antara include dan require dalam hal penanganan kesalahan juga sangat penting. Jika file yang disertakan menggunakan include tidak ditemukan, eksekusi program tetap berlanjut dengan menampilkan peringatan (warning). Sebaliknya, jika menggunakan require, program akan berhenti sepenuhnya dan menampilkan kesalahan fatal (fatal error). Ini memungkinkan pengembang untuk memilih metode yang paling sesuai berdasarkan konteks penggunaan file tersebut 
+4. Penggunaan _once untuk Mencegah Redeklarasi
+Fungsi include_once dan require_once memastikan bahwa file hanya disertakan sekali, bahkan jika dipanggil beberapa kali. Ini mencegah terjadinya redeclaration error, yang sering terjadi ketika mendeklarasikan fungsi atau kelas yang sama lebih dari sekali dalam aplikasi besar [7]
+5. Mempermudah Pemeliharaan Kode
+Dengan memisahkan kode ke dalam file-file terpisah, pemeliharaan menjadi lebih mudah. Pengembang dapat dengan cepat menemukan dan memperbaiki bagian-bagian tertentu dari kode tanpa harus mencari di seluruh basis kode
+</p>
+                `
+            };
+            
+
+            document.getElementById('question-content').innerHTML = content[section] || "<p>Soal tidak ditemukan.</p>";
+        }
+    </script>
+</body>
+</html>
